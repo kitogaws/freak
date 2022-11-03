@@ -1,18 +1,23 @@
-lst = [1, 2]
+class Food:
+    def __init__(self, name, calories, weight):
+        self.name = name
+        self.calories = calories
+        self.weight = weight
 
-while len(lst) <= 31:
-    result = lst[-1] + lst[-2]
-    lst.append(result)
+    def __str__(self):
+        return f'название: {self.name}, калорийность: {self.calories}, масса: {self.weight}'
 
-new_lst = []
-result = 0
 
-for i in lst:
-    if i % 2 == 0:
-        new_lst.append(i)
+burger = Food("бургер", "300 ккал", "100 грамм")
 
-    if 4000000 <= result < 5000000:
-        print(result)
-        break
+print(burger)
+
+
+class Monkey:
+    max_age = 12
+    loves_bananas = True
+
+    def climb(self):
+        print('I am climbing the tree') 
 
 
